@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>KyyToon</title>
-    <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
-
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">=</button>
 
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -23,41 +19,6 @@
         <li><a href="index.php">Upload Karya</a></li>
         <li> <a href="profil.php">Profil</a></li>
     </div>
-    </div>
-
-    <div class="content">
-        <button class="tombol" ><a href="add.php">Tambah Data</a></button>
-        <table class="table table-hover" >
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">ID User</th>
-                <th scope="col">Tahun Dibuat</th>
-                <th scope="col">Author</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Aksi</th>
-            </tr>
-            <?php
-            include "koneksi.php";
-            $no = 1;
-            $data = mysqli_query($koneksi, "select * from pembuatan");
-            while ($row = mysqli_fetch_array($data)) {
-            ?>
-            <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $row['id_user']; ?></td>
-                <td><?php echo $row['tahun_dibuat']; ?></td>
-                <td><?php echo $row['author']; ?></td>
-                <td><?php echo $row['genre']; ?></td>
-                <td>
-                    <a href="ubah.php?id=<?php echo $row['id_user']; ?>">Edit</a>
-                    <a href="hapus.php?id=<?php echo $row['id_user']; ?>" onclick="return confirm('Apakah Anda Yakin?')">Hapus</a>
-                </td>
-            </tr>
-            <?php
-                }
-            ?>
-        </table>
-    
     </div>
 
 
