@@ -21,7 +21,7 @@ body {
 </style>
 
 <body>
-    <h2>Form Edit Data Comic</h2>
+    <h2 align="center">Form Edit Data Comic</h2>
     <div class="ubah">
     
     <?php
@@ -51,6 +51,10 @@ body {
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Genre</label>
         <input type="text" name="genre" value="<?php echo $row['genre']; ?>" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Cover Komik</label>
+        <input type="file" name="cover" value="<?php echo $row['cover']; ?>" class="form-control" id="exampleInputPassword1">
     </div>
     <input type="submit" name="edit" value="Edit" class="btn btn-primary">
     <input type="reset" name="batal"  value="Batal" class="btn btn-primary">

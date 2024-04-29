@@ -21,8 +21,9 @@ body {
 </style>
 
 <body>
+    <h2 align="center">Tambah Data</h2>
     <div class="tambah">
-    <form action=insert.php method="post">
+    <form action=insert.php method="post" enctype="multipart/form-data">
    
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Id User</label>
@@ -39,6 +40,10 @@ body {
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Genre</label>
         <input type="text" name="genre" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Cover Komik</label>
+        <input type="file" name="cover" class="form-control" id="exampleInputPassword1">
     </div>
     <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
     <input type="reset" name="batal"  value="Batal" class="btn btn-primary">

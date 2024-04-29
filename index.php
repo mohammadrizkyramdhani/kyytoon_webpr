@@ -10,9 +10,10 @@
 </head>
 
 <body>
+    
 
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">=</button>
-
+    <h2 align="center">Upload Karyamu disini KyyToone-ers</h2>
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">KyyToon</h5>
@@ -34,7 +35,9 @@
                 <th scope="col">Tahun Dibuat</th>
                 <th scope="col">Author</th>
                 <th scope="col">Genre</th>
+                <th scope="col">Cover Komik</th>
                 <th scope="col">Aksi</th>
+                
             </tr>
             <?php
             include "koneksi.php";
@@ -48,6 +51,7 @@
                 <td><?php echo $row['tahun_dibuat']; ?></td>
                 <td><?php echo $row['author']; ?></td>
                 <td><?php echo $row['genre']; ?></td>
+                <td><img style="width:120px;" src="cover_img/<?php echo $row['cover']; ?>"</td>
                 <td>
                     <a href="ubah.php?id=<?php echo $row['id_user']; ?>">Edit</a>
                     <a href="hapus.php?id=<?php echo $row['id_user']; ?>" onclick="return confirm('Apakah Anda Yakin?')">Hapus</a>
